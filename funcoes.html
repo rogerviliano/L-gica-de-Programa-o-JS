@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função recebendo função</title>
+</head>
+<body>
+    <script>//exemplo de ordem de chamada das funções.
+        var primeira = function() {
+            console.log("1-primeira função");
+            segunda();//executará toda a funçao para retomar fluxo da primeira.
+            console.log("5 primeira função final");
+}
+        var segunda = function() {
+            console.log("2 segunda função");
+            terceira();//executa toda a terceira função, retornando a segunda, para então retomar a primeira função.
+            console.log("4 segunda função final");
+}
+        var terceira = function() {
+            console.log("3 Terceira função");
+}
+        primeira();
+    </script>
+</body>
+</html>

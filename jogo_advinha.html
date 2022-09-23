@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo advinha</title>
+</head>
+<body>
+    <script>//condicional if else
+        function mostra(frase){
+            document.write(frase);
+        }
+        var numeroPensadoComCasasDecimais=Math.random()*10;//variavel temporaria
+        var numeroPensado=Math.round(numeroPensadoComCasasDecimais);
+        
+        var numeroPensado0a100=Math.round(Math.random()*10);//sem criar uma variavel temporaria
+        var chute=parseInt(prompt("Tente advinhar o numero pensado:"));
+        if(chute===numeroPensado0a100){
+            mostra("Parabéns, você acertou!!! Eu pensei no numero "+numeroPensado0a100);
+        }else{
+            mostra("Ahh, você errou!!! O número correto era "+numeroPensado0a100);
+        }
+    </script>
+</body>
+</html>

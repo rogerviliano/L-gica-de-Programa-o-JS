@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Advinha2</title>
+</head>
+<body>
+    <script>
+    function mostra(frase){
+        document.write(frase);
+    }
+    function sorteia(numero){
+        return parseInt(Math.round(Math.random()*(numero-0)+0));
+    }
+       
+    //var numeroPensado=Math.round(Math.random()*10);
+    numeroPensado=parseInt(sorteia(limite))
+    console.log(numeroPensado);
+
+    var limite=parseInt(prompt("Digite o limite dos chutes"))
+    numeroPensado=parseInt(sorteia(limite))
+    console.log(numeroPensado);
+    console.log(limite)
+    var chute=parseInt(prompt("Tente advinhar o numero pensado:"));
+        
+        
+      
+        if (chute>limite){
+            alert("Numero fora dos limites de 0 a "+limite);
+        }
+        else if(chute<numeroPensado){
+            mostra("O numero pensado era maior, tente outra vez! ");
+        }
+        else if(chute>numeroPensado){
+            mostra("O numero pensado era menor, tente novamente!");
+        }
+        else if(isNaN(chute)){
+            alert("Digite apenas numeros!")        
+        }
+        
+        
+        else{
+            mostra("Você acertou! O numero pensado era "+numeroPensado+". Parabéns!!")
+        }
+        
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas</title>
+</head>
+<body>
+    <script>
+        function calcula_diasVividos(idade){
+            let dias=idade*365;
+            return dias;
+        }
+        function calcula_batimentos(dias){
+            let batimentos=dias*24*60*80;
+            return batimentos;
+        }
+        function pulalinha(){
+            document.write("<br><br>")
+        }
+        function calculaIMC(Nome, peso, altura){
+            var imc2=peso/altura**2;
+            document.write("<br>"+Nome+", seu <strong>IMC</strong> atual é de "+imc2.toFixed(2).replace(".",","))
+
+        }
+        let usuario=prompt("Bom dia! Qual o seu nome?"); 
+        let idade2=prompt(usuario+", qual a sua idade?");//reutilizando o input do usuario salvo na variavel anterior
+        document.write("Seja bem vindo "+usuario+"!");
+        pulalinha()
+        document.write("Você tem "+idade2+" anos de idade.")
+        pulalinha()
+        let peso=prompt("Qual seu peso atual?");
+        let altura=prompt("E qual a sua altura?... em metros").replace(",",'.');//replace(substitui o primeiro argumento,se existente, pelo segundo)
+
+        calculaIMC(usuario,peso,altura);
+
+        let diasTotal=calcula_diasVividos(idade2);
+        let batimentos=calcula_batimentos(diasTotal)//recebe o retorno da função
+        pulalinha()
+        document.write("Você ja viveu "+diasTotal+" dias!");
+        pulalinha()
+        document.write(" Seu coração já bateu "+batimentos+" vezes.");
+        
+        let testeFunção=calcula_batimentos(calcula_diasVividos(idade2));//função recebendo função como parametro.
+        console.log(testeFunção);//mostra no console o resultado da chamada.
+        
+
+    </script>
+    
+</body>
+</html>

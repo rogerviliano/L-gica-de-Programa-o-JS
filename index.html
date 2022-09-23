@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lógica de Programação JS</title>
+</head>
+<body>
+  Meu primeiro teste
+  <h3>Seria isso um programa?</h3>
+  <strong>Não</strong> consigo fazer nada além de conteúdo fixo?
+
+  Conheça o site da nossa editora:
+  <a href="http://www.casadocodigo.com.br">Clique aqui</a>!
+
+  <script>
+    var pulaLinha = function(){
+      document.write("<hr>")
+    }
+    //alert("podemos fazer mais com Javascript");
+    //alert "chamando sem parenteses" -- uncaught SyntaxError: Unexpected string index.html:19
+    document.write("Olá Mundo!");
+    pulaLinha()
+    document.write(" Bora aprender a programar!");
+    pulaLinha()
+    document.write("Minha idade é:");
+    let x=38;
+    document.write(x);
+    pulaLinha()
+    document.write("25"+"25"+ " Concatenação de strings");
+    pulaLinha()//concatenação de strings
+    document.write("A soma das idades é: ");
+    let soma=25+30+50
+    document.write(soma);
+    pulaLinha()
+    document.write("A media de idades é " + soma/3)
+    pulaLinha()
+    const umaGeracao = 28;
+    let anoAtual=2021;
+    let numGeracao=anoAtual/umaGeracao;
+    document.write("O numero de gerações desde o ano Zero é de " + numGeracao.toFixed(2));
+    pulaLinha()
+    let numberX=10.2472;
+    document.write(Math.round(numberX));
+    pulaLinha()
+    document.write(numberX.toFixed(2));
+  </script>
+
+  <h3>Alcool ou Gasolina?</h3>
+  <script>
+    let tanque=40;//litros
+    let caminhoComGasolina=480; // kilometros
+    let consumoDeGasolina=caminhoComGasolina/tanque;
+    document.write("O consumo de gasolina é de "+ consumoDeGasolina.toFixed(3))
+    pulaLinha()
+    let caminhoComAlcool=480;
+    let consumoDeAlcool=caminhoComAlcool/tanque;
+    document.write("O consumo de alcool é de "+ consumoDeAlcool.toFixed(3))
+    let precoGasolina=3.5;
+    let precoAlcool=4.5;
+    let precoPorKilometroAlcool=precoAlcool/consumoDeAlcool;
+    let precoPorKilometroGasolina=precoGasolina/consumoDeGasolina;
+    document.write("O preço por Kilometro com gasolina é de " + precoPorKilometroGasolina.toFixed(2))
+    pulaLinha()
+    document.write("O preço por kilometro com Alcool é de " + precoPorKilometroAlcool.toFixed(2))
+    pulaLinha()
+
+    if (precoPorKilometroAlcool<precoPorKilometroGasolina) {
+        document.write("Alcool está mais barato");
+    } else {
+        document.write("A gasolina está mais barata");
+    }
+        
+    
+      
+    
+  </script>
+</body>
+</html>

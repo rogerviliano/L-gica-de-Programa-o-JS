@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pontos Futebol</title>
+</head>
+<body>
+    <h3>Como expressar uma condição?</h3>
+    <script>
+        function exibe(mensagem){
+            document.write(mensagem+"<br>");
+        }
+        
+        //var vitorias=prompt("1 -Quantas jogos o Inter Futebol Clube venceu?");//5
+        //var empates=prompt("1-Quantos jogos o Inter Futebol Club empatou?");//2
+        //var pontos=(vitorias*3)+(empates);//152 - concatena o input do prompt como strings.Resultado correto seria 17 (15+2)
+        //exibe("A pontuação do Inter é de "+pontos+" pontos") 
+
+        //parseInt - transforma a string recebida do prompt em numero
+        //var vitorias3=(prompt("4-Quantas jogos o Juventude Futebol Clube venceu?"));
+        //var empates3=(prompt("4-Quantos jogos o Juventude Futebol Club empatou?"));
+        //var pontos3=parseInt((vitorias3*3)+(empates3));
+        //exibe("A pontuação do Juventude é de "+pontos3+"pontos");// Continuará a concatenar strings, pois o JS resolve primeiro os parenteses internos"
+    
+        //parseInt() - transforma a string recebida do prompt em numero
+        var vitoriasCDC=parseInt(prompt("2-Quantas jogos o CDC Futebol Clube venceu?"));
+        var empatesCDC=parseInt(prompt("2-Quantos jogos o CDC Futebol Club empatou?"));
+        var pontosCDC=(vitoriasCDC*3)+(empatesCDC);
+        exibe("A pontuação do CDC é de "+pontosCDC+" pontos."); 
+
+        //outro exemplo chamando a função na variavel que não é convertida em numero pelo JS, pois não sofre operação.
+        var vitoriasGremio=prompt("3-Quantas jogos o Grêmio Futebol Clube venceu?");
+        var empatesGremio=prompt("3-Quantos jogos o Grêmio Futebol Clube empatou?");
+        var pontosGremio=(vitoriasGremio*3)+parseInt(empatesGremio);//devido a multiplicação, a variavel vitórias é transformada em numero pelo JS.
+        exibe("A pontuação do Grêmio é de "+pontosGremio+" pontos"); 
+
+        let diferenca=Math.abs(pontosCDC-pontosGremio);
+      
+
+        if(pontosCDC>pontosGremio){
+            exibe("CDC está na frente por "+diferenca+" pontos");
+        }
+        if(pontosCDC==pontosGremio){
+            exibe("Os times estão empatados");
+        }
+        else {
+            exibe("Grêmio está na frente por "+diferenca+" pontos.")
+        }
+            </script>
+</body>
+</html>

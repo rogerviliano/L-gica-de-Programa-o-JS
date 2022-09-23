@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <script>
+
+        var mostra=function(frase){
+            document.write("<br>"+frase)
+        }
+
+        var peso=75;//kilogramas
+        var altura=1.72;//metros
+        var imc=peso/(altura*altura);
+        mostra("Seu IMC é de "+imc.toFixed(2));//função recebe variavel e arredonda para 2 casas decimais
+
+        var imcGeral=function(Nome, peso, altura){
+            var imc2=peso/altura**2;
+            document.write("<br>"+Nome+", seu <strong>IMC</strong> atual é de "+imc2.toFixed(2))
+            return imc2;
+        }
+        imcGeral("RogerV",70,1.72);
+        imcGeral("Natasha",75,1.72);
+
+        var imc_calc=function(peso, altura){
+            var imc3=peso/altura**2;
+            return imc3; //valor que retornará ao ponto de chamada / "Retorno da função"
+        }
+        var meuPeso=70;
+        var minhaAltura=1.72;
+        var meuIMC=imc_calc(meuPeso,minhaAltura);//valor retornando ao ponto de chamada da função
+        mostra("Meu IMC atual é "+meuIMC.toFixed(2));
+
+        var nomeUsuario=prompt("Seu nome?");
+        var meuPeso2=(prompt("Seu Peso?"));
+        var minhaAltura2=(prompt("Sua Altura?").replace(",","."));
+        var imcNovo =imcGeral(nomeUsuario,meuPeso2,minhaAltura2);
+
+        if(imcNovo>=18.5 && imcNovo<=35){
+            mostra("Seu IMC está dentro dos limites");
+        }
+    </script>
+</body>
+</html>

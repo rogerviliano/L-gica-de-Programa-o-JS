@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostra Idades</title>
+</head>
+<body>
+    <script>
+        var pulaLinha=function(){
+            document.write("<br>");
+            
+        }
+    var ano = 2022;
+    document.write("Eu nasci em : " + (ano - 25)); //1997
+    pulaLinha();
+    document.write("Adriano nasceu em : " + (ano - 26));//1996
+    pulaLinha();
+    document.write("Paulo nasceu em : " + (ano - 32));//1990
+    pulaLinha();
+
+    //Quando percebemos que estamos sendo muito repetitivos, sempre podemos considerar a criação de uma nova função
+    var mostra=function(frase){
+        document.write("<big>"+frase+"</big>")
+        pulaLinha()
+    }
+
+    mostra("Meu nome é Roger Viliano");
+    mostra("Estes são exemplos de funções");
+    mostra("Eu nasci em : " + (ano - 25));
+    mostra("Adriano nasceu em : " + (ano - 26));
+    mostra("Paulo nasceu em : " + (ano - 32));
+
+    var pessoa = function(nome, idade){
+        document.write("Meu nome é "+ nome);
+        pulaLinha();
+        document.write("Eu tenho "+idade+" anos de idade");
+        document.write("<hr>");
+    }
+    let nome_principal= "Roger Viliano";
+
+    pulaLinha()//chamada de função, sem parametros
+    pessoa(nome_principal,38);//função recebendo variavel como parametro
+    pessoa("Natasha",34)//parametros sendo passados diretamente a funçaõ
+    pessoa("Biel",11)
+    </script>
+ 
+</body>
+</html>

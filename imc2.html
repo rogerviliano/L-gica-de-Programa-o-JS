@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo do IMC</title>
+</head>
+<body>
+    <Script>
+        function mostra(frase){
+            document.write("<br>"+frase)
+        }
+        function calcIMC(peso,altura){
+            let imc=peso/altura**2;
+            return imc
+        }
+        let nome_user=prompt("Informe seu nome:");
+        let peso_user=prompt("Qual seu peso?").replace(',','.');
+        let altura_user=prompt("Qual sua altura?").replace(',','.');
+        
+        let imcUser=calcIMC(peso_user,altura_user).toFixed(2);
+        mostra("Seu IMC atual é de "+imcUser+".");
+
+        if(imcUser>=18.5 && imcUser<25){
+            mostra(nome_user+", seu IMC é considerado NORMAL.");
+        }
+        if(imcUser<18.5){
+            mostra(nome_user+", seu IMC é considerado de BAIXO PESO");
+        }
+        if(imcUser>=25 && imcUser<=29.9){
+            mostra(nome_user+", seu IMC é considerado EXCESSO DE PESO");
+        }
+        if(imcUser>=30 && imcUser<35){
+            mostra(nome_user+", seu IMC é considerado OBESIDADE");
+        }
+        if(imcUser>35){
+            mostra(nome_user+", seu IMC é considerado OBESIDADE EXTREMA")
+        }
+
+    </Script>
+    
+</body>
+</html>
