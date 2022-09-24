@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuadas</title>
+</head>
+<body>
+    <script>
+        function mostra(frase){
+            document.write(frase+"<br>");
+        }
+        var tabuada=prompt("Digite a tabuada desejada: ");
+        var multiplicador=1;
+
+        mostra("Tabuada utilizando laço <strong>while</strong>")
+        while(multiplicador<=10){
+            mostra(tabuada+" X "+multiplicador+"="+(tabuada*multiplicador));
+            multiplicador+=1;
+        }
+        mostra("Esta é e tabuada do "+tabuada+".")
+
+        mostra("Tabuada utilizando o laço <strong>for</strong>")
+        for(var mult=1;mult<=10;mult++){
+            mostra(tabuada+"X"+mult+"="+tabuada*mult);
+        }
+        mostra("Esta é e tabuada do "+tabuada+".")
+    </script>
+</body>
+</html>

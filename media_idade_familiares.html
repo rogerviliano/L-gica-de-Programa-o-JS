@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media com For</title>
+</head>
+<body>
+    <script>
+        function mostra(frase){
+            document.write(frase)
+        }
+
+        var somaIdades=0;
+        
+        var totalFamiliares=parseInt(prompt("Quantos familiares são?: "));
+        for(var numero=1;numero<=totalFamiliares;numero++){
+            var idade=parseInt(prompt("Digite a idade"))
+            somaIdades+=idade;
+        }
+        var mediaIdades=((somaIdades/totalFamiliares).toFixed(2)).replace(".",",");
+        mostra("A média de idade dos "+totalFamiliares+" familiares é de " +mediaIdades+" anos")
+    </script>
+</body>
+</html>
