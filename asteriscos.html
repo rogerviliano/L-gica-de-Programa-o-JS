@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteriscos</title>
+</head>
+<body>
+    <script>
+        /*for(var linha=0;linha<3;linha++){
+            for(coluna=0;coluna<10;coluna++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }*/
+
+        function mostra(print){
+            document.write(print);
+        }
+        function quebra(){
+            document.write("<br>")
+        }
+       
+            /*let num=4;
+            for(var linhas=0;linhas<num;linhas++){
+                for(colunas=0;colunas<num;colunas++){
+                    mostra("*")
+                    
+                }
+                mostra("<br>");
+            }  */
+       
+            //SEM LOOP ANINHADO
+        /*let num=9;
+        let figura="";
+            for(colunas=num;colunas>0;--colunas){
+                mostra(figura+=("*"));
+                mostra("<br>")
+            }
+            mostra("<br>");*/
+
+            /*let num=prompt("Digite uma altura para o triângulo:")
+            let ast="";
+            
+            for(linhas=1;linhas<=num;++linhas){
+                for(col=1;col<=num;col++){
+                    ast+="*";
+                    break
+                }
+                mostra(ast);
+                quebra()
+            }*/
+
+            //V de Vingança
+
+            let n=prompt("Digite seu V de Vingança:");
+            let pos1=1;let pos2=n;
+            for(linha=1;linha<=n;linha++){
+                for(col=1;col<=n;col++){
+                    if(pos1>pos2){
+                        break
+                    }
+                    if(col==pos1||col==pos2){
+                        mostra("*");
+                    }
+                    else{
+                        mostra("-");
+                    }
+                }
+                pos1+=1;pos2-=1;
+                quebra()
+            }
+         
+            
+               
+
+          
+
+
+    </script>
+</body>
+</html>

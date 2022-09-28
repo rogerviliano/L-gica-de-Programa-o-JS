@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinha até acerto</title>
+</head>
+<body>
+    <script>
+        var numeroPensado=Math.round(Math.random()*(1000-0)+0);
+        console.log(numeroPensado);
+        let x=1;
+        while(tentativa!=numeroPensado){
+            var tentativa=parseInt(prompt("Tentativa numero: "+x+" - Tente adivinhar o número pensado:"));
+            x+=1;
+            if(tentativa===numeroPensado){
+                alert("Parabens, você acertou!");
+            }
+            
+        }
+        document.write("Fim de jogo! Total de tentativas: "+(x-1));
+    </script>
+</body>
+</html>
